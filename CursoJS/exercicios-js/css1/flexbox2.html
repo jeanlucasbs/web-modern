@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox #02</title>
+    <style>
+        div {
+            border: solid 5px dodgerblue;
+            font-size: 30px;
+        }
+
+        .flex-container div {
+            box-sizing: border-box;
+        }
+        
+        .flex-container {
+            display: flex;
+            height: 300px;
+            width: 600px;
+        }
+
+        .flex-container div:nth-child(3){
+            background-color: indianred;
+            order: 1; /*Elementos com ordem maiores tendem a ser exibidos por ultimo*/
+            order: 0;/*Ordem que está*/
+            order: -1; /*Ele vai ser exibido na primeira posição por ter um ordem menor que os outros*/
+            align-self: center; /*Vai ficar alinhado no centro*/
+            align-self: flex-start;
+            align-self: flex-end;
+            align-self: stretch;/*Padrao de alinhamento*/
+        }
+
+        /*Flex grow serve para quanto no container sobrar espaço, vc trabalha para dividir o restante desse espaço entre as divs*/
+        .flex-container div {
+            width: 100px;
+            flex-grow: 1;/*Todo vao crescer de forma igual*/
+
+        }
+
+        .flex-container div:nth-child(2){
+            flex-grow: 2;
+        }
+
+        .flex-container {
+            width: 300px;
+            flex-shrink: 1;/*Eles vão encolher igualmente*/
+        }
+
+        .flex-container div:nth-child(1) {
+            flex-shrink: 5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

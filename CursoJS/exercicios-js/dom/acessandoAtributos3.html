@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Acessando Atributos #03</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <ul id="compras" destino='escritório' data-urgencia="5">
+            <li>Café</li>
+            <li>Água</li>
+            <li>Copo Descartável</li>
+        </ul>
+    </div>
+    <script>
+        const lista = document.querySelector('#compras')
+
+        //somente leitura dos atributos, nao consegue altera-los
+        console.log(lista.attributes) //acessa todos os atributos
+        console.log(lista.attributes[0])
+        console.log(lista.attributes.destino)
+        // console.log(lista.attributes.data-urgencia) Nao tem como usar esse pois a notação esta errada
+        console.log(lista.attributes['data-urgencia'])
+    </script>
+</body>
+
+</html>

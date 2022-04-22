@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tamanho Box</title>
+    <style>
+        body {
+            font-size: 45px;
+            margin: 0;
+        }
+
+        div {
+            background-color: deepskyblue;
+            width: 100%; /*Esse 100% é o tamanho do conteudo. Porem sem box-sizing, como colocou o padding e o border, ele vai gerar um barra de rolagem*/
+            height: 300px;
+            padding: 100px;
+            border: solid 20px;
+            box-sizing: border-box /*ou content-box. Ele vai considerar somente o conteudo*/
+        }
+    </style>
+</head>
+<body>
+    <div>
+        O tamanho do Box é...
+    </div>
+</body>
+</html>
