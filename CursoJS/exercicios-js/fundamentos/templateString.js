@@ -1,9 +1,9 @@
-const nome = 'Rebeca'
-const concatenacao = 'Olá ' + nome + '!'
+const nome  = 'Rebeca'
+const concatenacao = 'Olá ' + '!'
 const template = `
     Olá
     ${nome}!`
 console.log(concatenacao, template)
 
-//empressoes
-console.log(`1 + 1 = ${1 + 1} `)
+//expressoes
+console.log(`1 + 1 = ${1+1}`)

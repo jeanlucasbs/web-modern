@@ -9,7 +9,7 @@ console.log(valores.length)
 valores.push({id: 3}, false, null, 'teste')
 console.log(valores)
 
-console.log(valores.pop())
+console.log(valores.pop())//funcao POP vai retirar o ultimo valor do array
 delete valores[0]
 console.log(valores)
 
