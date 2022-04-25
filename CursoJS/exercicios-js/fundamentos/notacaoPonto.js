@@ -1,12 +1,13 @@
-console.log(Math.ceil(6.1))
+console.log(Math.ceil(6.1))//arredonda para cima
 
 const obj1 = {}
 obj1.nome = 'Bola'
+//obj1['nome'] = 'Bola2'
 console.log(obj1.nome)
 
-function Obj(nome){
+function Obj(nome) {
     this.nome = nome
-    this.exec = function(){
+    this.exec = function() {
         console.log('Exec...')
     }
 }
