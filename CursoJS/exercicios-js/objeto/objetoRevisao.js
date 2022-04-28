@@ -1,3 +1,4 @@
+//coleção dinâmica de pares chave/valor
 const produto = new Object
 produto.nome = 'Cadeira'
 produto['marca do produto'] = 'Generica'
@@ -8,36 +9,36 @@ delete produto.preco
 delete produto['marca do produto']
 console.log(produto)
 
-const carro = { 
+const Carro = {
     modelo: 'A4',
     valor: 89000,
     proprietario: {
-        nome: 'Jean',
-        idade: 22,
+        nome: 'Raul',
+        idadade: 56,
         endereco: {
-            logradouro: 'Avenida Afonso Pena',
-            numero: 140
+            logradouro: 'Rua ABC',
+            numero: 123
         }
     },
     condutores: [{
-        nome: 'Lucas',
+        nome: 'Junior',
         idade: 19
     },{
         nome: 'Ana',
         idade: 42
     }],
-    calculaValorSeguro: function(){
+    calcularValorSeguro: function () {
         //...
     }
 }
 
-carro.proprietario.endereco.numero = 1000
-carro['proprietario']['endereco']['logradouro'] = 'Av Gigante'
-console.log(carro)
+Carro.proprietario.endereco.numero = 1000
+Carro['proprietario']['endereco']['logradouro'] = 'Av Gigante'
+console.log(Carro)
 
-//delete carro.condutores
-delete carro.proprietario.endereco
-delete carro.calculaValorSeguro
-console.log(carro)
-console.log(carro.condutores)
-console.log(carro.condutores.length)
+delete Carro.condutores
+delete Carro.proprietario.endereco
+delete Carro.calcularValorSeguro
+console.log(Carro)
+console.log(Carro.condutores)
+
