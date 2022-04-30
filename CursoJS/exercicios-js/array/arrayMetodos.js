@@ -1,31 +1,28 @@
-//Remover elemento da ultima posição
 const pilotos = ['Vettel', 'Alonso', 'Raikkonen', 'Massa']
-pilotos.pop()
+pilotos.pop() //remove o ultimo elemento
 console.log(pilotos)
 
-//Adicionar elemento na ultima posição
-pilotos.push('Verstappen')
+pilotos.push('Verstappen') //add elemento na ultima posição
 console.log(pilotos)
 
-//Remover elemento da primeira posição
-pilotos.shift()
+pilotos.shift() //remove elemento da primeira posição
 console.log(pilotos)
 
-//Adiciona elemento na primeira posição
-pilotos.unshift('Hamilton')
-
-//Adicionar com o splice
-pilotos.splice(2,0, 'Bottas','Massa')
+pilotos.unshift('Hamilton') //add elemento na primeira posição
 console.log(pilotos)
 
-//Remover com o splice
-pilotos.splice(3,1)
+//splice pode add ou remover elementos
+
+//adicionar
+pilotos.splice(2,0, 'Bottas', 'Massa') //vai adicionar os elementos antes do elemento 2
 console.log(pilotos)
 
-//Novo Array
-const algunsPilotos1 = pilotos.slice(2)
+//remover
+pilotos.splice(3, 1)
+console.log(pilotos)
+
+const algunsPilotos1 = pilotos.slice(2) //cria um novo array a partir de outro
 console.log(algunsPilotos1)
 
-//Novo array a partir de um intervalo
-const algunsPilotos2 = pilotos.slice(1,4)
+const algunsPilotos2 = pilotos.slice(1, 4) //pega o intervalo, porem não pega o elemento 4
 console.log(algunsPilotos2)
