@@ -18,12 +18,16 @@
     <script>
         const lista = document.querySelector('#compras')
 
-        //somente leitura dos atributos, nao consegue altera-los
-        console.log(lista.attributes) //acessa todos os atributos
-        console.log(lista.attributes[0])
-        console.log(lista.attributes.destino)
-        // console.log(lista.attributes.data-urgencia) Nao tem como usar esse pois a notação esta errada
+        //somente leitura
+        console.log(lista.attributes) //acessa todos os atributos do elemento
+        console.log(lista.attributes[0]) //acessa o primeiro atributo do elemento
+        console.log(lista.attributes.id)
+        console.log(lista.attributes[1])
+        console.log(lista.attributes.destino) // acessa o atributo do elemento selecionado
+        console.log(lista.attributes[2])
+        console.log(lista.attributes.data-urgencia)//nao pode acessar dessa forma pois o ifen vai dar erro
         console.log(lista.attributes['data-urgencia'])
+
     </script>
 </body>
 

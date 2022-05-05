@@ -12,7 +12,7 @@
     <script>              
         document.getElementById('primeiro').classList.add('destaque')
 
-        const divs = document.ElementsByTagName('div')
+        const divs = document.getElementsByTagName('div')
         Array.from(divs).forEach(e => e.classList.remove('destaque'))
 
         const divsArray = [...divs]

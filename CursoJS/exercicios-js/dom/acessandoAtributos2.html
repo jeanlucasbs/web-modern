@@ -17,24 +17,18 @@
         </ul>
     </div>
     <script>
-        const lista = document.querySelector('div ul[destino = "escritorio"]')
-        console.log('Elemento "ul" -------------')
+        const lista = document.querySelector('div ul[destino="escritório"]')
+        console.log('Elemento ul --------------------')
         console.log('childNodes', lista.childNodes)
-        console.log('destino', lista.destino)
+        console.log('destino', lista.destino)//ele não pega assim pq o atributo destino é personalizado
         console.log('getAttribute', lista.getAttribute('destino'))
-        console.log('hasAttribute', lista.hasAttribute('destino'))
-        lista.setAttribute('destino', 'empresa')
+        console.log('hasAttribute', lista.hasAttribute('destino'))//Verifica se tem determinado atributo
+        lista.setAttribute('destino', 'empresa')//Serve tando para atribuir um novo valor para variavel como tb serve para setar um novo valor
         lista.setAttribute('status', 'aberto')
         lista.removeAttribute('destino')
         console.log(lista.dataset.urgencia) //aqui vai pegar o sufixo sem o nome "data"
         lista.dataset.urgencia = 4
         console.log(lista.getAttribute('data-urgencia'))
-
-        //cuidado
-        const label = document.querySelector('label')
-        console.log(label.for) //nao vai acessar
-        console.log(label.htmlFor) // vai acessar
-        console.log(label.getAttribute('for'))
     </script>
 </body>
 

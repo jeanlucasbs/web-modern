@@ -12,7 +12,20 @@
         <p>Texto Inicial</p>
     </div>
     <script>
-        // ...
+        const div = document.querySelector('div')
+        div.innerHTML = 'Texto Alterado' //o innerHTML vai substituir tudo dentro do elemento para o que você quer,
+        //incluindo suas propriedades. No caso ele vai sumir com o paragráfo
+        //div.outerHTML = 'Texto Alterado' //Vai substituir não só o conteudo como também vai substituir o que foi selecionado
+        //vai sumir com o paragrafo e a div também. Nesse caso aqui não vai mais existir div.
+
+        div.insertAdjacentHTML('beforebegin', '<p>Antes Início</p>')
+        div.insertAdjacentHTML('afterbegin', '<p>Depois Início</p>')
+        div.insertAdjacentHTML('beforeend', '<p>Antes Fim</p>')
+        div.insertAdjacentHTML('afterend', '<p>Depois Início</p>')
+
+        //somente texto (sem tags)
+        console.log(div.innerText)
+
     </script>
 </body>
 

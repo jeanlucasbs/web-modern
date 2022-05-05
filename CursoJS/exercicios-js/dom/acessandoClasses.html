@@ -13,9 +13,10 @@
     </div>
     <script>
         const classes = document.querySelector('div').classList
+
         classes.add('destaque')
         classes.remove('destaque')
-        classes.toggle('destaque')
+        classes.toggle('destaque') //ele fica alternando. Se tiver ele remove, se não tiver ele adiciona
         console.log(classes.contains('destaque'))
         console.log(classes.length)
         classes.toggle('destaque')
@@ -29,7 +30,6 @@
             console.log(c)
         }
 
-        classes.forEach(c => console.log(c))
     </script>
 </body>
 
