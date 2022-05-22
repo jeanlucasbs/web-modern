@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Entendendo jQuery</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Entendendo jQuery</h1>
+    <div>1</div>
+    <div>2</div>
+
+    <script>
+        $('div').hide(5000).show(5000).fadeOut(5000)
+        console.log($('div').get(0))
+        console.log($.isEmptyObject({nome: null})) //verifica se o objeto esta vazio ou não
+        console.log(jQuery.inArray(3, [1, 2, 3])) //Verifica se um determinado valor pertence ao array
+
+        $.fn.fundoVerde = function () {  //$.fn é a mesma coisa que $.prototype.
+            this.css('background-color', 'green')
+            return this //além da função fazer o que tem que fazer, ela retorna o prorpio objeto para que consiga encadiar chamadas
+        }
+
+        $('body').fundoVerde().hide(5000).fadeOut(5000)
+    </script>
+</body>
